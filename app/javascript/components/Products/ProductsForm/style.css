@@ -2,17 +2,14 @@
   margin: 15px 0 15px 15px;
   width: 700px;
 }
-.image {
-  margin: 50px;
-  padding: 50px;
-}
-.form .input {
+
+.input {
   margin-left: 35px;
-  width: 400px;
+  width: 1000px;
 }
 .product-card-form {
   margin: 100px 0 0 300px;
 }
-.title{
+.field{
   padding: 15px;
 }

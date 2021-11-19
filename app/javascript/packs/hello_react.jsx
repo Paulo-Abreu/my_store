@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (element) {
     const rawData = Object.assign({}, element.dataset);
-    console.log(rawData)
     const propsData = Object.keys(rawData).reduce((acc, prop) => {
       acc[prop] = JSON.parse(rawData[prop]);
       return acc;
