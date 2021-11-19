@@ -1,0 +1,18 @@
+.form {
+  margin: 15px 0 15px 15px;
+  width: 700px;
+}
+.image {
+  margin: 50px;
+  padding: 50px;
+}
+.form .input {
+  margin-left: 35px;
+  width: 400px;
+}
+.product-card-form {
+  margin: 100px 0 0 300px;
+}
+.title{
+  padding: 15px;
+}
