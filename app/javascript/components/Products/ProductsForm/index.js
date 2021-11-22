@@ -7,7 +7,6 @@ const ProductsForm = (props) => {
   const [price, setPrice] = useState("");
   const [details, setDetails] = useState("");
 
-
   const handleSubmit = (event) => {
     axios
       .post(
@@ -38,7 +37,7 @@ const ProductsForm = (props) => {
               <i className="fas fa-check"></i>
             </span>
           </div>
-          <p className="help is-success">This name is correct</p>
+          <p className="help is-success">O nome é aceito</p>
         </div>
 
         <div className="field">
@@ -52,7 +51,7 @@ const ProductsForm = (props) => {
             <i className ="fas fa-check"></i>
             </span>
           </div>
-          <p className="help is-success">This username is available</p>
+          <p className="help is-success">Preço aceito</p>
         </div>
 
         <div className="field">

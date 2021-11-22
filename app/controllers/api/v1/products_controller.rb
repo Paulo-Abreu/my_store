@@ -9,6 +9,7 @@ module Api::V1
         render json: product.errors.messages, status: 422
       end
     end
+    
     private
     def product_params
       params.require(:product).permit(:name, :details, :price)

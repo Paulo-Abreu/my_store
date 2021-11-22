@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_action :view_product, only: %i[ show edit ]
+  
   def index
     @products = Product.all
       @props = {
