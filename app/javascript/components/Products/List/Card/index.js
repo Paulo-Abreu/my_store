@@ -5,7 +5,9 @@ const Card = (props) => {
   return (
     < div >
       <div className="card product-card" >
-        <a>
+        <a onClick={() => {
+          window.location = "/products/" + props.id + "/buy";
+        }}>
           <div className="card-image">
             <figure className="image is-4by3">
               <img

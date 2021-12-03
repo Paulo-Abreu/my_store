@@ -2,9 +2,9 @@ import React from "react";
 import './style.css'
 import Card from "./Card";
 const ProductsList = (props) => {
-
+  
   const ListCards = props.data.products.map((product) =>
-    <Card name={product.name} price={product.price} details={product.details} />
+    <Card name={product.name} price={product.price} details={product.details} id={product.id} key={product.id}/>
   )
 
   return (
