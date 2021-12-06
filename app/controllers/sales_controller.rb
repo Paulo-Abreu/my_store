@@ -1,6 +1,7 @@
 class SalesController < ApplicationController
-  before_action :view_product, only: %i[ index ]
-  def index
+  before_action :view_product, only: %i[ checkout ]
+
+  def checkout
     @props = {
       data: {
         products: @product

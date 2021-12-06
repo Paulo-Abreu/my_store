@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to:'home#index'
   resources :products
 
-  get '/products/:id/buy', to: 'sales#index'
+  get '/products/:id/buy', to: 'sales#checkout'
 
   namespace :api do
     namespace :v1 do
