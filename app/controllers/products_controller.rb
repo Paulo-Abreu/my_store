@@ -47,6 +47,8 @@ class ProductsController < ApplicationController
   end
 
   def map_to_json(product)
-    {id: product.id, name: product.name, details: product.details, date: product.created_at.strftime("%d/%m/%y %H:%M"), price: product.price}
+    {
+      id: product.id, name: product.name, details: product.details, date: product.created_at.strftime("%d/%m/%y %H:%M"), price: product.price
+    }
   end
 end
