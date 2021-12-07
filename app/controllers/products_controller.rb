@@ -24,6 +24,17 @@ class ProductsController < ApplicationController
     }
   end
 
+  def show
+  @props = {
+    data: {
+      product: @product
+    },
+    component: {
+      name: 'show_product',
+    }
+  }
+  end
+
   private
 
   def product_params
