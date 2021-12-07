@@ -25,14 +25,15 @@ class ProductsController < ApplicationController
   end
 
   def show
-  @props = {
-    data: {
-      product: @product
-    },
-    component: {
-      name: 'show_product',
+    @product = map_to_json(@product)
+    @props = {
+      data: {
+        product: @product
+      },
+      component: {
+        name: 'show_product',
+      }
     }
-  }
   end
 
   private
@@ -43,5 +44,9 @@ class ProductsController < ApplicationController
   
   def view_product
     @product = Product.find(params[:id])
+  end
+
+  def map_to_json(product)
+    {id: product.id, name: product.name, details: product.details, date: product.created_at.strftime("%d/%m/%y %H:%M"), price: product.price}
   end
 end

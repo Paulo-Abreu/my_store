@@ -9,11 +9,11 @@ const ShowProduct = (props) => {
           <div class="media-left"></div>
           <div class="media-content">
             <h1 class="title">{props.data.product.name}</h1>
-            <p id="date">Produto postado em: {props.data.product.name}</p>
+            <p id="date">Produto postado em: {props.data.product.date}</p>
             <br />
-            <h4 class="subtitle">Detalhes: {props.data.product.name}</h4>
+            <h4 class="subtitle">Detalhes: {props.data.product.details}</h4>
             <br />
-            <h4 class="subtitle">Price: {props.data.product.name}</h4>
+            <h4 class="subtitle">Price: {props.data.product.price}</h4>
             <br />
             <img
               class="img"
