@@ -6,7 +6,7 @@ const Card = (props) => {
     < div >
       <div className="card product-card" >
         <a onClick={() => {
-          window.location = "/products/" + props.id + "/buy";
+          window.location = "/products/" + props.id;
         }}>
           <div className="card-image">
             <figure className="image is-4by3">
@@ -25,7 +25,7 @@ const Card = (props) => {
             </div>
 
             <div className="content">
-              <h6>{props.details}</h6>
+              <p>{props.details}</p>
             </div>
           </div>
         </a>
