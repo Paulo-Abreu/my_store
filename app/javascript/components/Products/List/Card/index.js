@@ -3,11 +3,13 @@ import './style.css';
 
 const Card = (props) => {
   return (
-    < div >
-      <div className="card product-card" >
-        <a onClick={() => {
-          window.location = "/products/" + props.id;
-        }}>
+    <div>
+      <div className="card product-card">
+        <a
+          onClick={() => {
+            window.location = "/products/" + props.id;
+          }}
+        >
           <div className="card-image">
             <figure className="image is-4by3">
               <img
@@ -25,12 +27,14 @@ const Card = (props) => {
             </div>
 
             <div className="content">
-              <p>{props.details}</p>
+              <p>
+                <i class="far fa-thumbs-up">   {props.likes}</i>
+              </p>
             </div>
           </div>
-        </a>
+        </a>  
       </div>
-    </div >
+    </div>
   );
 }
 export default Card;
