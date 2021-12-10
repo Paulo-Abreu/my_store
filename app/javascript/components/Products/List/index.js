@@ -4,7 +4,7 @@ import Card from "./Card";
 const ProductsList = (props) => {
   
   const ListCards = props.data.products.map((product) =>
-    <Card name={product.name} price={product.price} details={product.details} id={product.id} key={product.id}/>
+    <Card product={product} key={product.id}/>
   )
 
   return (

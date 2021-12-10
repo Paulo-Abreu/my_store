@@ -3,14 +3,15 @@ class ProductsController < ApplicationController
   
   def index
     @products = Product.all
-      @props = {
-        data: {
-          products: @products
-        },
-        component: {
-          name: 'products_list',
-        }
+    @products = @products.map { |r| ActiveModel::SerializableResource.new(r) }      
+    @props = {
+      data: {
+        products: @products
+      },
+      component: {
+        name: 'products_list',
       }
+    }
   end
 
   def new
