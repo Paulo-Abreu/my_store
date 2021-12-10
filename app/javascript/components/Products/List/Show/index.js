@@ -3,9 +3,10 @@ import './style.css';
 import axios from 'axios';
 
 const handleSubmit = (id) => {
+  // TODO: Remove this console.log
   axios.post("/api/v1/likes", { product_id: id }).then((response) => {
     (window.location = "/"), console.log(response);
-  }); 
+  });
 };
 
 const ShowProduct = (props) => {
