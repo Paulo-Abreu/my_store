@@ -5,7 +5,7 @@ class SalesController < ApplicationController
     @props = {
       data: {
         products: @product,
-        user:user_info,
+        user:current_user,
       },
       component: {
         name: 'checkout_page',

@@ -1,5 +1,4 @@
 import React from "react";
-import './style.css'
 import TableStock from "./Table";
 
 const Stock = (props) => {

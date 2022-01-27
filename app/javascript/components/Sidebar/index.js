@@ -1,7 +1,6 @@
 import React from 'react';
 import CustomerLinks from "./MenuLinks";
 import SalesLinks from './MenuLinks/SalesLinks';
-import './style.css'
 
 const Sidebar = (props) => {
   return (
@@ -12,18 +11,8 @@ const Sidebar = (props) => {
       </div>
       <div className="sidebarWrapper">
         <div>
-          {props.user &&
-            props.user.data &&
-            props.user.data.user &&
-            props.user.data.user.user.user_type == "customer" && (
-              <CustomerLinks />
-            )}
-          {props.user &&
-            props.user.data &&
-            props.user.data.user &&
-            props.user.data.user.user.user_type == "salesman" && (
-              <SalesLinks />
-            )}
+          {props.user.data.user.user_type == "customer" && ( <CustomerLinks /> )}
+          { props.user.data.user.user_type == "salesman" && ( <SalesLinks /> )}
         </div>
       </div>
     </div>

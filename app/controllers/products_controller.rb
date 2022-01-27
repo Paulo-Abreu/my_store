@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
     @props = {
       data: {
         products: @products,
-        user:user_info,
+        user: current_user,
       },
       component: {
         name: 'products_list',
@@ -27,11 +27,10 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @product = map_to_json(@product)
     @props = {
       data: {
-        product: @product,
-        user:user_info,
+        product: map_to_json(@product),
+        user: current_user,
       },
       component: {
         name: 'show_product',

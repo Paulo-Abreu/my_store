@@ -5,7 +5,7 @@ class HomeController < ApplicationController
         name: 'home'
       },
       data:{
-        user:user_info,
+        user:current_user,
       }
     }
   end
