@@ -10,10 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_08_135313) do
+ActiveRecord::Schema.define(version: 2022_01_25_143935) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "controllers", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.string "users"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_controllers_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_controllers_on_reset_password_token", unique: true
+  end
 
   create_table "likes", force: :cascade do |t|
     t.bigint "product_id", null: false
@@ -31,6 +44,7 @@ ActiveRecord::Schema.define(version: 2021_12_08_135313) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "details"
+    t.integer "quantity"
   end
 
   create_table "sells", force: :cascade do |t|
@@ -38,6 +52,14 @@ ActiveRecord::Schema.define(version: 2021_12_08_135313) do
     t.integer "customer_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "stock_movements", force: :cascade do |t|
+    t.bigint "product_id", null: false
+    t.integer "quantity"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["product_id"], name: "index_stock_movements_on_product_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -55,4 +77,5 @@ ActiveRecord::Schema.define(version: 2021_12_08_135313) do
 
   add_foreign_key "likes", "products"
   add_foreign_key "likes", "users"
+  add_foreign_key "stock_movements", "products"
 end

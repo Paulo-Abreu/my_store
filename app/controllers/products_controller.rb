@@ -6,7 +6,8 @@ class ProductsController < ApplicationController
     @products = @products.map { |r| ActiveModel::SerializableResource.new(r) }      
     @props = {
       data: {
-        products: @products
+        products: @products,
+        user:user_info,
       },
       component: {
         name: 'products_list',
@@ -29,7 +30,8 @@ class ProductsController < ApplicationController
     @product = map_to_json(@product)
     @props = {
       data: {
-        product: @product
+        product: @product,
+        user:user_info,
       },
       component: {
         name: 'show_product',

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-const CustomerLinks = (props) => {
+const SalesLinks = (props) => {
   return (
     <ul className="menu">
       <li className="menu-item">
@@ -29,16 +29,26 @@ const CustomerLinks = (props) => {
         <a
           className="menu-link"
           onClick={() => {
-            window.location = "/explore/";
+            window.location = "/products/new";
           }}
         >
-          <i className="fas fa-users"></i>
-          <p className="title is-4 has-text-white">Explorar</p>
+          <i className="fas fa-shopping-basket"></i>
+          <p className="title is-4 has-text-white">Anunciar</p>
+        </a>
+      </li>
+      <li className="menu-item">
+        <a
+          className="menu-link"
+          onClick={() => {
+            window.location = "/timeline";
+          }}
+        >
+          <i className="fas fa-boxes"></i>
+          <p className="title is-4 has-text-white">Timeline</p>
         </a>
       </li>
     </ul>
   );
-}
+};
 
-export default CustomerLinks;
-                      
+export default SalesLinks;
