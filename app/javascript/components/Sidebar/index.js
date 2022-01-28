@@ -11,8 +11,8 @@ const Sidebar = (props) => {
       </div>
       <div className="sidebarWrapper">
         <div>
-          {props.user.data.user.user_type == "customer" && ( <CustomerLinks /> )}
-          { props.user.data.user.user_type == "salesman" && ( <SalesLinks /> )}
+          {props.user.user_type == "customer" && ( <CustomerLinks /> )}
+          {props.user.user_type == "salesman" && ( <SalesLinks /> )}
         </div>
       </div>
     </div>

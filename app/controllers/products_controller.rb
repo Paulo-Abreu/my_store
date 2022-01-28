@@ -2,11 +2,9 @@ class ProductsController < ApplicationController
   before_action :view_product, only: %i[ show edit ]
   
   def index
-    @products = Product.all
-    @products = @products.map { |r| ActiveModel::SerializableResource.new(r) }      
     @props = {
       data: {
-        products: @products,
+        products: products_all(@products),
         user: current_user,
       },
       component: {
@@ -18,7 +16,8 @@ class ProductsController < ApplicationController
   def new
     @props = {
       data: {
-        product: @product
+        product: @product,
+        user: current_user,
       },
       component: {
         name: 'products_form',

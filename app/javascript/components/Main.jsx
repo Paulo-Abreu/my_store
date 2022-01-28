@@ -6,11 +6,10 @@ class Main extends Component {
   render() {
     //const name = this.props.data.user.name;
     const component = this.props.data.component.name
-    const user = this.props.data  
 
     return (
       <div className="dashboard">
-        <Sidebar user={user}/>
+        <Sidebar user={this.props.data.data.user}/>
         <div className="main-panel">
           <div className="content">
             <ComponentLoader tag={component} data={this.props.data}/>
