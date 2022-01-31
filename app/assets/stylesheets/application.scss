@@ -1,0 +1,261 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+.signup-container {
+   position: relative;
+   background-color: #ffffff;
+   border: 1px solid #999999;
+   border: 1px solid rgba(0, 0, 0, 0.2);
+   border-radius: 6px;
+   outline: none;
+   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+   background-clip: padding-box;
+   width: 70%;
+   margin: auto;
+   padding: 40px;
+   margin-top: 40px;
+ }
+ 
+ .signup-container .signup-form input[type="text"], .signup-container .signup-form input[type="password"],
+ .signup-container .signup-form input[type="number"], .signup-container .signup-form input[type="email"] {
+     border-radius: 3px;
+     border: 2px;
+     color: #333333;
+     font-size: 16px;
+     height: 16px;
+     margin-bottom: 5px;
+     padding: 13px 12px;
+     width: 100%;
+ }
+ 
+ .signup-container .signup-form .form-control {
+     border-radius: 3px;
+     background-color: rgba(0, 0, 0, 0.09);
+     box-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.09) inset;
+     color: #FFFFFF;
+   }
+ 
+   .signup-container .signup-form .btn-register {
+     background-color: #00BBFF;
+     border-color: black;
+     border-width: 2px;
+     color: #FFFFFF;
+     display: block;
+     margin: 0 auto;
+     padding: 15px 50px;
+     text-transform: uppercase;
+     width: 80%;
+     margin-top: 20px;
+ }
+.actions {
+  width: 100px;
+}
+.product-card {
+  width: 300px;
+  margin-left: 30px;
+  padding: 5px;
+}
+
+.title-page {
+  margin-left: 300px;
+}
+
+a{
+  color: black;
+}
+.payment-page {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+  width: 1100px;
+  margin-left: 450px;
+}
+
+.row {
+  display: flex;
+}
+
+.col-25 {
+  flex: 25%;
+}
+
+.col-50 {
+  flex: 50%;
+}
+
+.col-75 {
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  margin-top: 20px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+.show-products {
+  display: flex;
+  margin: 50px 0 0 500px;
+}
+.page-content {
+  margin: 50px 0 0 300px;
+}
+
+.img {
+  width: 300px;
+}
+
+.button {
+  margin-left: 10px;
+}
+.form {
+  margin: 15px 0 15px 15px;
+  width: 700px;
+}
+
+.input {
+  margin-left: 35px;
+  width: 1000px;
+}
+.product-card-form {
+  margin: 100px 0 0 300px;
+}
+.field{
+  padding: 15px;
+}
+.sidebar {
+  color: #fff;
+  font-weight: 300;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  width: 260px;
+  background: #4a4b4b;
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56),
+    0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.sidebar .menu li a {
+  margin: 10px 15px 0;
+  border-radius: 3px;
+  color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-transform: capitalize;
+  font-size: 16px;
+  padding: 10px 15px;
+  text-decoration: none;
+  background-color: transparent;
+  transition: all 0.15s ease-in;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.sidebar .menu p {
+  margin: 0;
+  line-height: 30px;
+  font-size: 16px;
+  position: relative;
+  display: block;
+  height: auto;
+  white-space: nowrap;
+  padding-left: 21px;
+}
+.menu-link {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  font-size: 20px;
+}
+.sidebar .logo .logo-text {
+  text-transform: uppercase;
+  padding: 25px 0;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+}
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-stock {
+  margin: 50px 0 0 280px;
+}
+
+.new-button {
+  margin: 20px;
+}
+
+.content table {
+  width: 1000px;
+}

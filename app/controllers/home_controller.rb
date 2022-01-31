@@ -3,6 +3,9 @@ class HomeController < ApplicationController
     @props = {
       component: {
         name: 'home'
+      },
+      data:{
+        user: current_user,
       }
     }
   end

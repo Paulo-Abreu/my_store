@@ -9,10 +9,10 @@ class Main extends Component {
 
     return (
       <div className="dashboard">
-        <Sidebar />
+        <Sidebar user={this.props.data.data.user}/>
         <div className="main-panel">
           <div className="content">
-            <ComponentLoader tag={component} data={this.props.data} />
+            <ComponentLoader tag={component} data={this.props.data}/>
           </div>
         </div>
       </div>
