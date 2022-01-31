@@ -4,7 +4,7 @@ class StocksController < ApplicationController
   def index
     @props = {
       data: {
-        products:all_products,
+        products: all_products,
         user: current_user,
       },
       component: {
