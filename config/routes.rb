@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :products
 
   get '/products/:id/buy', to: 'sales#checkout'
-  get '/stock', to: 'stock#index'
+  get '/stocks', to: 'stocks#index'
 
   namespace :api do
     namespace :v1 do

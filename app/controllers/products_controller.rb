@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
   def index
     @props = {
       data: {
-        products: products_all(@products),
+        products: all_products,
         user: current_user,
       },
       component: {
@@ -35,7 +35,7 @@ class ProductsController < ApplicationController
         name: 'show_product',
       }
     }
-  end
+  end 
 
   private
 

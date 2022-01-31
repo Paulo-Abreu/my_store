@@ -1,12 +1,11 @@
-class StockController < ApplicationController
+class StocksController < ApplicationController
   before_action :view_product, only: %i[ show edit ]
   
   def index
-    @products = Product.all
     @props = {
       data: {
-        products: map_to_json(@products),
-        user:current_user,
+        products:all_products,
+        user: current_user,
       },
       component: {
         name: 'stock',

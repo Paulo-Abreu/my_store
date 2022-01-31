@@ -1,9 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   
-  def products_all(prod)
-    prod = Product.all
-    products = prod.map { |r| ActiveModel::SerializableResource.new(r) }      
-    products
+  def all_products
+      Product.all.map { |r| ActiveModel::SerializableResource.new(r) }
   end
 end
