@@ -5,6 +5,8 @@ import ProductsList from './Products/List';
 import ShowProduct from './Products/List/Show';
 import CheckoutPage from './Products/Checkout';
 import Stock from './Stock';
+import StockEdit from './Stock/Edit';
+import StockRemove from './Stock/Remove';
 
 class ComponentLoader extends Component {
   components = {
@@ -14,6 +16,8 @@ class ComponentLoader extends Component {
     checkout_page: CheckoutPage,
     show_product: ShowProduct,
     stock: Stock,
+    stock_edit: StockEdit,
+    stock_remove: StockRemove,
   };
 
   render() {

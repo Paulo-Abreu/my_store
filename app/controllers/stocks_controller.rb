@@ -1,10 +1,9 @@
 class StocksController < ApplicationController
-  before_action :view_product, only: %i[ show edit ]
-  
+
   def index
     @props = {
       data: {
-        products: all_products,
+        stock: StockItem.all.map { |r| ActiveModel::SerializableResource.new(r) },
         user: current_user,
       },
       component: {
@@ -13,10 +12,27 @@ class StocksController < ApplicationController
     }
   end
 
-  private
-  def map_to_json(product)
-    {
-      id: product.id, name: product.name, quantity: product.quantity
+  def edit
+    @props = {
+      data: {
+        stock: StockItem.find(params[:id]),
+        user: current_user,
+      },
+      component: {
+        name: 'stock_edit',
+      }
+    }
+  end
+
+  def remove
+    @props = {
+      data: {
+        stock: StockItem.find(params[:id]),
+        user: current_user,
+      },
+      component: {
+        name: 'stock_remove',
+      }
     }
   end
 end

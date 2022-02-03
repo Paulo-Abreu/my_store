@@ -4,6 +4,7 @@ module Api::V1
       product = Product.new(product_params)
       product.user = current_user
       if product.save
+        StockItem.create(product: product)
         render json: product, status: 201
       else
         render json: product.errors.messages, status: 422
