@@ -19,7 +19,7 @@ Rails.application.routes.draw do
       resources :products
       resources :likes
       resources :stocks
-      resources :stocks_remove
+      patch '/stocks/:id/remove', to: 'stocks#remove'
     end
   end
 end

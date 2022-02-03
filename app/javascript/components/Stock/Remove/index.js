@@ -5,9 +5,8 @@ const StockRemove = (props) => {
   const [quantity, setQuantity] = useState("");
 
   const handleSubmit = (event) => {
-    console.log("swdfsdfsdf");
     axios.patch(
-      "/api/v1/stocks_remove/" + props.data.stock.id,
+      "/api/v1/stocks/" + props.data.stock.id + "/remove",
       {
         stock_item: {
           quantity: quantity,

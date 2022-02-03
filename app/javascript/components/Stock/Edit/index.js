@@ -5,7 +5,6 @@ const StockEdit = (props) => {
   const [quantity, setQuantity] = useState("");
 
   const handleSubmit = (event) => {
-    console.log("swdfsdfsdf")
     axios.patch(
       "/api/v1/stocks/" + props.data.stock.id,
       {
