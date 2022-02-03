@@ -10,11 +10,16 @@ Rails.application.routes.draw do
 
   get '/products/:id/buy', to: 'sales#checkout'
   get '/stocks', to: 'stocks#index'
+  get '/stocks/add/:id', to: 'stocks#edit'
+  get '/stocks/remove/:id', to: 'stocks#remove'
 
+  
   namespace :api do
     namespace :v1 do
       resources :products
       resources :likes
+      resources :stocks
+      patch '/stocks/:id/remove', to: 'stocks#remove'
     end
   end
 end

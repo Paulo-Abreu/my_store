@@ -1,5 +1,20 @@
 import React from "react";
 
+const Add = (event) => {
+  axios.post(
+    "/api/v1/stocks",
+    {
+      product: {
+        name: props.name,
+        price: props.price,
+        quantity: props.quantity,
+      },
+    },
+    (window.location = "/products")
+  );
+  event.preventDefault();
+};
+
 const TableStock = (props) => {
   return (
     <div className="card content-stock">
@@ -30,10 +45,24 @@ const TableStock = (props) => {
                     <td>{props.price}</td>
                     <td>{props.quantity}</td>
                     <td>
-                      <button className="button is-primary">Add</button>
+                      <button
+                        className="button is-primary"
+                        onClick={() => {
+                          window.location = "/stocks/add/" + props.id;
+                        }}
+                      >
+                        Add
+                      </button>
                     </td>
                     <td>
-                      <button className="button is-danger">Remove</button>
+                      <button
+                        className="button is-danger"
+                        onClick={() => {
+                          window.location = "/stocks/remove/" + props.id;
+                        }}
+                      >
+                        Remove
+                      </button>
                     </td>
                   </tr>
                 </tbody>
