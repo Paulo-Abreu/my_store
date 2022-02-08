@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# StockMovement table.
 class CreateStockMovements < ActiveRecord::Migration[6.1]
   def change
     create_table :stock_movements do |t|
