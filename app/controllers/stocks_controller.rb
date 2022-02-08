@@ -1,13 +1,15 @@
-class StocksController < ApplicationController
+# frozen_string_literal: true
 
+# Controller to manage the pages about the stock, to edit and list.
+class StocksController < ApplicationController
   def index
     @props = {
       data: {
         stock: StockItem.all.map { |r| ActiveModel::SerializableResource.new(r) },
-        user: current_user,
+        user: current_user
       },
       component: {
-        name: 'stock',
+        name: 'stock'
       }
     }
   end
@@ -16,10 +18,10 @@ class StocksController < ApplicationController
     @props = {
       data: {
         stock: StockItem.find(params[:id]),
-        user: current_user,
+        user: current_user
       },
       component: {
-        name: 'stock_edit',
+        name: 'stock_edit'
       }
     }
   end
@@ -28,10 +30,10 @@ class StocksController < ApplicationController
     @props = {
       data: {
         stock: StockItem.find(params[:id]),
-        user: current_user,
+        user: current_user
       },
       component: {
-        name: 'stock_remove',
+        name: 'stock_remove'
       }
     }
   end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   devise_for :users, controllers: {
     sessions: 'users/sessions',
@@ -5,7 +7,7 @@ Rails.application.routes.draw do
   }
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root to:'home#index'
+  root to: 'home#index'
   resources :products
 
   get '/products/:id/buy', to: 'sales#checkout'
@@ -13,7 +15,6 @@ Rails.application.routes.draw do
   get '/stocks/add/:id', to: 'stocks#edit'
   get '/stocks/remove/:id', to: 'stocks#remove'
 
-  
   namespace :api do
     namespace :v1 do
       resources :products
