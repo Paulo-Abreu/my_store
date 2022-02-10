@@ -9,8 +9,9 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: 'home#index'
   resources :products
+  resources :payments
 
-  get '/products/:id/buy', to: 'sales#checkout'
+  get '/products/:id/buy', to: 'payments#checkout'
   get '/stocks', to: 'stocks#index'
   get '/stocks/add/:id', to: 'stocks#edit'
   get '/stocks/remove/:id', to: 'stocks#remove'
@@ -21,6 +22,7 @@ Rails.application.routes.draw do
       resources :likes
       resources :stocks
       patch '/stocks/:id/remove', to: 'stocks#remove'
+      post '/stocks/:id/payment', to: 'stocks#payment'
     end
   end
 end

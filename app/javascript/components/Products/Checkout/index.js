@@ -5,15 +5,23 @@ const CheckoutPage = (props) => {
   const [quantity, setQuantity] = useState("");
 
   const handleSubmit = (event) => {
-    axios.patch(
-      "/api/v1/stocks/" + props.data.stock[0].id + "/remove",
-      {
+    axios
+      .post("/api/v1/stocks/" + props.data.stock[0].id + "/payment", {
         stock_item: {
-          quantity: quantity,
+          id: props.data.stock[0].id,
+          product_id: props.data.stock[0].product_id,
+          price: props.data.stock[0].item.price * quantity,
+          quantity: quantity
         },
-      },
-      (window.location = "/stocks")
-    );
+      })
+      .then((response) => {
+        console.log(response);
+        this.$swal("Parabéns!", "Produto criado com sucesso!", "success").then(
+          () => {
+            window.location = "/payment";
+          }
+        );
+      });
     event.preventDefault();
   };
 
