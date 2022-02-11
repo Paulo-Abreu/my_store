@@ -7,6 +7,8 @@ import CheckoutPage from './Products/Checkout';
 import Stock from './Stock';
 import StockEdit from './Stock/Edit';
 import StockRemove from './Stock/Remove';
+import PaymentPage from './Products/Payment';
+import ViewSale from './Products/Payment/View';
 
 class ComponentLoader extends Component {
   components = {
@@ -18,6 +20,8 @@ class ComponentLoader extends Component {
     stock: Stock,
     stock_edit: StockEdit,
     stock_remove: StockRemove,
+    payment_page: PaymentPage,
+    view_sale: ViewSale
   };
 
   render() {
