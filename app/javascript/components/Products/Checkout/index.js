@@ -18,9 +18,10 @@ const CheckoutPage = (props) => {
         console.log(response);
         this.$swal("Parabéns!", "Produto criado com sucesso!", "success").then(
           () => {
-            window.location = "/payment";
+            window.location = "/stocks";
           }
         );
+      window.location = "/stocks";
       });
     event.preventDefault();
   };
