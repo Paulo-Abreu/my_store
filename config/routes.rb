@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
   resources :products
   resources :payments
-
+  resources :users
   get '/products/:id/buy', to: 'payments#checkout'
   get '/stocks', to: 'stocks#index'
   get '/stocks/add/:id', to: 'stocks#edit'
