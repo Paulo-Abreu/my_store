@@ -9,7 +9,8 @@ import StockEdit from './Stock/Edit';
 import StockRemove from './Stock/Remove';
 import PaymentPage from './Products/Payment';
 import ViewSale from './Products/Payment/View';
-
+import Users from './Users';
+import UserShow from './Users/UserShow/Show';
 class ComponentLoader extends Component {
   components = {
     home: Home,
@@ -21,7 +22,9 @@ class ComponentLoader extends Component {
     stock_edit: StockEdit,
     stock_remove: StockRemove,
     payment_page: PaymentPage,
-    view_sale: ViewSale
+    view_sale: ViewSale,
+    users: Users,
+    user_show: UserShow,
   };
 
   render() {
