@@ -4,12 +4,16 @@ module Api
   module V1
     # Controller to create a product, stock item, and also render the new product.
     class ProductsController < Api::BaseController
+      def index
+        render json: Product.all
+      end
+
       def create
         product = Product.new(product_params)
         product.user = current_user
         if product.save
           StockItem.create(product: product)
-          render json: product, status: 201
+          render json: product, status: :created
         else
           render json: product.errors.messages, status: 422
         end

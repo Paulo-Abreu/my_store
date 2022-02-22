@@ -44,7 +44,7 @@ const StockEdit = (props) => {
           </div>
           <div className="control">
             <button className="button is-link is-light">Cancel</button>
-          </div>
+          </div>  
         </div>
       </form>
     </div>
