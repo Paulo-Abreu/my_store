@@ -5,6 +5,10 @@ module Api
     # Controller to manage the stock, add and remove items.
     class StocksController < Api::BaseController
       before_action :find_stock_item, only: %i[update remove payment]
+      
+      def index
+        render json: StockItem.all
+      end
 
       def update
         new_quantity = @stock_item.quantity + stock_item_params[:quantity].to_i
@@ -25,7 +29,8 @@ module Api
       end
 
       def payment
-        payment = Payment.new(user: current_user, stock_item_id: stock_item_params[:id], product_id: stock_item_params[:product_id], price: stock_item_params[:price], quantity: stock_item_params[:quantity])
+        payment = Payment.new(user: current_user, stock_item_id: stock_item_params[:id], product_id: stock_item_params[:product_id], 
+          price: stock_item_params[:price], quantity: stock_item_params[:quantity])
         if payment.save
           new_quantity = @stock_item.quantity - stock_item_params[:quantity].to_i
           @stock_item.update(quantity: new_quantity)
