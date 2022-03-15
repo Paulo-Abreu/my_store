@@ -28,7 +28,8 @@ class UsersController < ApplicationController
   end
 
   private
+
   def view_user
-    @user = (params[:id]) 
-  end  
-end 
+    @user = params[:id]
+  end
+end

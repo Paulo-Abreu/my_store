@@ -35,7 +35,7 @@
           null
         ]
       },
-      "/home/paulo/projects/my_store/app/controllers/api/v1/products_controller.rb": {
+      "/home/paulo/projects/my_store/app/controllers/api/v1/stocks_controller.rb": {
         "lines": [
           null,
           null,
@@ -44,21 +44,47 @@
           null,
           1,
           1,
+          null,
+          1,
           1,
           null,
           null,
           1,
           2,
           2,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
           2,
-          1,
-          1,
           null,
-          1,
-          null,
-          null,
-          null,
-          1,
           null,
           1,
           2,
@@ -88,7 +114,19 @@
           null
         ]
       },
-      "/home/paulo/projects/my_store/app/serializers/product_serializer.rb": {
+      "/home/paulo/projects/my_store/app/models/stock_item.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/paulo/projects/my_store/app/serializers/stock_item_serializer.rb": {
         "lines": [
           null,
           null,
@@ -99,26 +137,6 @@
           1,
           2,
           null,
-          null
-        ]
-      },
-      "/home/paulo/projects/my_store/app/models/like.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/home/paulo/projects/my_store/app/models/stock_item.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
           null
         ]
       },
@@ -181,7 +199,7 @@
         "branches": {
         }
       },
-      "/home/paulo/projects/my_store/app/controllers/api/v1/stocks_controller.rb": {
+      "/home/paulo/projects/my_store/app/controllers/api/v1/products_controller.rb": {
         "lines": [
           null,
           null,
@@ -190,22 +208,6 @@
           null,
           0,
           0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
           0,
           0,
           null,
@@ -219,12 +221,7 @@
           0,
           0,
           0,
-          0,
           null,
-          0,
-          null,
-          0,
-          0,
           0,
           null,
           0,
@@ -306,7 +303,6 @@
           0,
           0,
           0,
-          null,
           null,
           0,
           0,
@@ -640,6 +636,7 @@
       "/home/paulo/projects/my_store/app/controllers/users/sessions_controller.rb": {
         "lines": [
           null,
+          null,
           0,
           0,
           null,
@@ -673,6 +670,7 @@
       },
       "/home/paulo/projects/my_store/app/controllers/users/unlocks_controller.rb": {
         "lines": [
+          null,
           null,
           0,
           0,
@@ -740,6 +738,7 @@
           0,
           null,
           0,
+          null,
           0,
           0,
           0,
@@ -784,6 +783,18 @@
           0,
           null,
           null,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/paulo/projects/my_store/app/models/like.rb": {
+        "lines": [
+          null,
+          null,
+          0,
           0,
           0,
           0
@@ -841,7 +852,7 @@
         "branches": {
         }
       },
-      "/home/paulo/projects/my_store/app/serializers/stock_item_serializer.rb": {
+      "/home/paulo/projects/my_store/app/serializers/product_serializer.rb": {
         "lines": [
           null,
           null,
@@ -858,6 +869,6 @@
         }
       }
     },
-    "timestamp": 1645535553
+    "timestamp": 1647350179
   }
 }

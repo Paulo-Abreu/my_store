@@ -29,7 +29,6 @@ class PaymentsController < ApplicationController
     }
   end
 
-
   def show
     @props = {
       data: {
@@ -41,7 +40,7 @@ class PaymentsController < ApplicationController
       }
     }
   end
-  
+
   private
 
   def view_sale

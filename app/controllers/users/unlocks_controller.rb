@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Users
   class UnlocksController < Devise::UnlocksController
     # GET /resource/unlock/new
@@ -17,7 +18,7 @@ module Users
     # end
 
     # protected
-  
+
     # The path used after sending unlock password instructions
     # def after_sending_unlock_instructions_path_for(resource)
     #   super(resource)
