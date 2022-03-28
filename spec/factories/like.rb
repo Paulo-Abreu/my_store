@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 FactoryBot.define do
-  factory :stock_item do
-    quantity { 0 }
+  factory :like do
+    user { {} }
+    product_id {}
   end
 end

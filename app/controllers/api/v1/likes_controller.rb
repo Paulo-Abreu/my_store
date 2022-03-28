@@ -4,7 +4,7 @@ module Api
   module V1
     # Controller to create a like, and atributte to a product.
     class LikesController < Api::BaseController
-      before_action :find_like, only: %i[create]
+      before_action :find_product, only: %i[create]
 
       def create
         like = Like.new(user: current_user, product_id: @product.id)

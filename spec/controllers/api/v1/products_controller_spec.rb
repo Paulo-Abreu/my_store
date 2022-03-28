@@ -4,8 +4,8 @@ require 'rails_helper'
 
 RSpec.describe Api::V1::ProductsController, type: :controller do
   describe 'GET /products' do
-    let(:user){ create(:user) }
-    let!(:product){ create(:product, user: user) }
+    let(:user) { create(:user) }
+    let!(:product) { create(:product, user: user) }
 
     it 'returns all products' do
       get :index
@@ -13,10 +13,10 @@ RSpec.describe Api::V1::ProductsController, type: :controller do
       expect(JSON.parse(response.body).size).to eq(1)
     end
   end
-  
+
   describe 'POST /products' do
-    let!(:product){ create(:product, user: user) }
-    let(:user){ create(:user) }
+    let!(:product) { create(:product, user: user) }
+    let(:user) { create(:user) }
 
     context 'when success' do
       it 'create a new product' do
