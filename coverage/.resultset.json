@@ -35,7 +35,7 @@
           null
         ]
       },
-      "/home/paulo/projects/my_store/app/controllers/api/v1/likes_controller.rb": {
+      "/home/paulo/projects/my_store/app/controllers/api/v1/stocks_controller.rb": {
         "lines": [
           null,
           null,
@@ -46,11 +46,37 @@
           1,
           null,
           1,
+          1,
+          null,
+          null,
+          1,
           2,
           2,
           1,
           null,
           1,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
           null,
           null,
           null,
@@ -88,13 +114,28 @@
           null
         ]
       },
-      "/home/paulo/projects/my_store/app/models/like.rb": {
+      "/home/paulo/projects/my_store/app/models/stock_item.rb": {
         "lines": [
           null,
           null,
           1,
           1,
           1,
+          1,
+          null
+        ]
+      },
+      "/home/paulo/projects/my_store/app/serializers/stock_item_serializer.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          2,
+          null,
           null
         ]
       },
@@ -114,6 +155,42 @@
         "lines": [
           null,
           null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/paulo/projects/my_store/app/controllers/api/v1/likes_controller.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
           0,
           0,
           0,
@@ -145,67 +222,6 @@
           0,
           0,
           null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/home/paulo/projects/my_store/app/controllers/api/v1/stocks_controller.rb": {
-        "lines": [
-          null,
-          null,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
           0,
           null,
           0,
@@ -774,6 +790,18 @@
         "branches": {
         }
       },
+      "/home/paulo/projects/my_store/app/models/like.rb": {
+        "lines": [
+          null,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
       "/home/paulo/projects/my_store/app/models/payment.rb": {
         "lines": [
           null,
@@ -791,19 +819,6 @@
         "lines": [
           null,
           null,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/home/paulo/projects/my_store/app/models/stock_item.rb": {
-        "lines": [
-          null,
-          null,
-          0,
-          0,
-          0,
           0,
           0
         ],
@@ -852,24 +867,8 @@
         ],
         "branches": {
         }
-      },
-      "/home/paulo/projects/my_store/app/serializers/stock_item_serializer.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
       }
     },
-    "timestamp": 1648480185
+    "timestamp": 1648567104
   }
 }

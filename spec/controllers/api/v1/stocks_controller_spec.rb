@@ -23,6 +23,8 @@ RSpec.describe Api::V1::StocksController, type: :controller do
     context 'when success' do
       it 'update a stock_item' do
         patch :update, params: { id: stock_item.id, stock_item: { quantity: stock_item.quantity } }
+        stock.reload
+        expect(stock_item.quantity).to eq(stock_item.quantity)
         expect(response).to have_http_status(200)
       end
     end

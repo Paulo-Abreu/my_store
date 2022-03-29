@@ -12,6 +12,7 @@ module Api
           render json: { message: 'NÃO É POSSIVEL DAR MAIS DE UM LIKE' }, status: 422
         else
           like = @product.likes.create(user: current_user)
+          render json: like, status: :created
         end
       end
 
