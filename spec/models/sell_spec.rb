@@ -2,5 +2,5 @@
 
 require 'rails_helper'
 
-RSpec.describe StockMovement, type: :model do
+RSpec.describe Sell, type: :model do
 end
